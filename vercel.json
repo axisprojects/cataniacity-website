@@ -1,8 +1,8 @@
 {
   "rewrites": [
-    { "source": "/tos", "destination": "/api/tos" }
-    { "source": "/informativa-privacy", "destination": "/api/privacy" }
-    { "source": "/politica-rimborso", "destination": "/api/rimborsi" }
+    { "source": "/tos", "destination": "/api/tos" },
+    { "source": "/informativa-privacy", "destination": "/api/privacy" },
+    { "source": "/politica-rimborso", "destination": "/api/rimborsi" },
     { "source": "/tos", "destination": "/api/regolamento" }
 
   ]
