@@ -16,7 +16,7 @@ app.get('/regolamento', (req, res) => {
 });
 // Termini di Servizio
 app.get('/tos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'tos.html'));
+  res.redirect('https://docs.google.com/document/d/1JIYTozInWPClzAAvCCNCrW7L--61kITukCcLUFocIDQ/edit?usp=sharing');
 });
 // Politica sulla Privacy
 app.get('/informativa-privacy', (req, res) => {
