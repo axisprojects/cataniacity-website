@@ -1,0 +1,781 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="robots" content="index,follow">
+<meta name="description" content="CataniaCity - Un server minecraft semiroleplay con meccaniche nuove e sempre in aggiornamento per un ottima esperienza!">
+<meta name="keywords" content="CataniaCity, Minecraft, Server, Semiroleplay, CataniaRoleplay.it">
+<title> Home | CataniaCity</title>
+
+<link rel="icon" type="image/x-icon" href="/public/images/logo.png">
+
+<link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="css/uicons-regular-rounded.css">
+<link rel="stylesheet" href="css/uicons-brands.css">
+<link rel="stylesheet" href="css/uicons-bold-rounded.css">
+<script src="js/swiper-bundle.min_1.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lexend" rel="stylesheet">
+
+<link rel="stylesheet" href="css/core.css" class="template-customizer-core-css">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<script>
+    const BASEPATH = "";
+    const USERID = null;
+    const ACTION = "index";
+    let PREVSUBITEM = '';
+    let BANLISTACTIVE = 'all';
+    let NEWSYEAR = '';
+    let NEWSMOUTH = '';
+    let USERLOGIN = false;
+    let MCNICK = null;
+    let storeTemplate = 'store';
+    let selectedKategory = '';
+    let selectedSubKategory = '';
+    let selectedPayment = null;
+    let activeBansTyp = 'all';
+    let selectedStatistics = 'Votes';
+    const HOST = "https://" + "cataniaroleplay.it" +'/'
+
+</script>
+    <link rel="stylesheet" href="css/all.min_1.css" crossorigin="anonymous">
+
+    <style>
+        body.modal-open {
+            overflow: overlay !important;
+        }
+
+        .modal {
+            overflow-y: scroll; /* Zajištění existence vertikálního scrollbaru v modálním okně */
+        }
+
+        body.modal-open ::-webkit-scrollbar {
+            width: 12px; /* Šířka celého scrollbaru */
+        }
+
+        body.modal-open ::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Průhledná barva thumb */
+        }
+
+        body:not(.modal-open)::-webkit-scrollbar-thumb {
+            background-color: #33325C !important; /* Barva thumb */
+            border-radius: 20px !important; /* Zakulacení okrajů thumb */
+            border: 3px solid transparent !important; /* Vytvoření mezery kolem thumb */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<div class="modal fade" id="copiedText" tabindex="-1" aria-hidden="true" style="z-index: 10000">
+    <div class="modal-dialog" role="document">
+        <h5 class="modal-content login-box" style="background-color: #121028  !important;width: 545px;height: 360px">
+        <div class="modal-header" style="display: flex;flex-direction: row;padding: 0;align-items: center">
+            <h3></h3>
+            <span class="fi-rr-cross-circle second-color close-button bounce_button" id="deleteModalClose" type="button" data-bs-dismiss="modal" aria-label="Close"></span>
+        </div>
+        <div class="modal-body" style="display: flex;flex-direction: column;padding: 0;margin-top: 30px;align-items: center;">
+            <div class="success-animation">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                </svg>
+            </div>
+            <h3 class="color-white font-size-40 weight-bold">IP Copiato</h3>
+            <h3 class="color-white font-size-20 weight-bold">Ora puoi andare sul server</h3>
+        </div>
+    </h5></div>
+</div>
+<style>
+    .success-animation {
+        margin: -40px auto 20px auto;
+    }
+
+    .checkmark {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #4bb71b;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #4bb71b;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        margin: 0 auto;
+    }
+
+    .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #4bb71b;
+        fill: #fff;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+    }
+
+    .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    }
+
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes scale {
+        0%, 100% {
+            transform: none;
+        }
+
+        50% {
+            transform: scale3d(1.1, 1.1, 1);
+        }
+    }
+
+    @keyframes fill {
+        100% {
+            box-shadow: inset 0px 0px 0px 30px #4bb71b;
+        }
+    }
+</style>
+  
+    <div class="modal fade" id="hamburgerMenu" tabindex="-1" aria-hidden="true" style="z-index: 10000">
+        <div class="modal-dialog" role="document" style="padding: 0;margin: 8px">
+            <h5 class="modal-content menu-box" style="background-color: #121028  !important;width: 100%;height: 100%;">
+                <div class="modal-header" style="display: flex;flex-direction: row;padding: 0">
+                    <h3 class="color-white font-size-26 weight-bold"></h3>
+
+                    <span class="fi-rr-cross-circle second-color close-button" id="loginModalClose" style="margin-right: -23px" type="button" data-bs-dismiss="modal" aria-label="Close"></span>
+                </div>
+                <div class="modal-body" style="display: flex;flex-direction: column;padding: 0;gap: 15px;">
+                    <ul class="menu-hamburger-ul">
+                                            <li class="menu-item   active-menu-item" style="width: 47% !important;gap:3px;height: 100px !important;background-color: #1C1831">
+                                                <a class="menu-link menu-hover" style="display: flex;flex-direction: column;align-items: center;" href="/stranka/index">
+                                        <span class="fi fi-rr-home menu-buttons second-color menu-size-20 menu-item-hover" style="font-size: 40px;padding: 5px;margin-top: 5px"></span>
+                                                    <div class="menu-items">Home</div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item  " style="width: 47% !important;gap:3px;height: 100px !important;background-color: #1C1831">
+                                                <a class="menu-link menu-hover" href="obchod" style="display: flex;flex-direction: column;align-items: center;">
+                                        <span class="fi fi-rr-shopping-cart menu-buttons second-color menu-size-20 menu-item-hover" style="font-size: 40px;padding: 5px;margin-top: 5px"></span>
+                                                    <div class="menu-items">Negozio</div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item  " style="width: 47% !important;gap:3px;height: 100px !important;background-color: #1C1831">
+                                                <a class="menu-link menu-hover" style="display: flex;flex-direction: column;align-items: center;" href="#votaci">
+                                        <span class="fi fi-rr-handshake menu-buttons second-color menu-size-20 menu-item-hover" style="font-size: 40px;padding: 5px;margin-top: 5px"></span>
+                                                    <div class="menu-items">Votaci</div>
+                                                </a>
+                                            </li>
+                        
+                                              
+                                            <li class="menu-item  " style="width: 47% !important;height: 100px !important;gap:3px;background-color: #1C1831">
+                                                <a class="menu-link menu-hover" href="https://discord.gg/JUgWUuVbR6" style="display: flex; flex-direction: column;align-items: center;" target="_blank">
+                                                <span class="fi fi-br-time-twenty-four menu-buttons second-color menu-size-20 menu-item-hover" style="font-size: 40px;padding: 5px;margin-top: 5px"></span>
+                                                    <div class="menu-items">Assistenza</div>
+                                                </a>
+                                            </li>
+                                    
+                                        <li class="menu-item  " style="width: 47% !important;gap:3px;height: 100px !important;background-color: #1C1831">
+                                            <a class="menu-link menu-hover" style="display: flex;flex-direction: column;align-items: center;" href="/regolamento">
+                                        <span class="fi fi-rr-list-check menu-buttons second-color menu-size-20 menu-item-hover" style="font-size: 40px;padding: 5px;margin-top: 5px"></span>
+                                                <div class="menu-items">Regolamento</div>
+                                            </a>
+                                        </li>
+                                    
+                                            
+
+
+
+
+                    </ul>
+                </div>
+        </h5></div>
+    </div>
+
+<style>
+    .success-animation {
+        margin: -40px auto 20px auto;
+    }
+
+    .checkmark {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #4bb71b;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #4bb71b;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        position: relative;
+        top: 5px;
+        right: 5px;
+        margin: 0 auto;
+    }
+
+    .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #4bb71b;
+        fill: #fff;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+    }
+
+    .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    }
+
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes scale {
+        0%, 100% {
+            transform: none;
+        }
+
+        50% {
+            transform: scale3d(1.1, 1.1, 1);
+        }
+    }
+
+    @keyframes fill {
+        100% {
+            box-shadow: inset 0px 0px 0px 30px #4bb71b;
+        }
+    }
+</style><style>
+    .rc-anchor-light {
+        background: #0c0b1a !important;
+        color: #fff !important;
+    }
+    .rc-anchor-light.rc-anchor-normal, .rc-anchor-light.rc-anchor-compact {
+        border: 1px solid #33325c !important;
+    }
+</style>
+
+
+<script>
+    function handleInputFocus(inputElement, textElement) {
+        inputElement.addEventListener('focus', function () {
+            textElement.classList.add("input-focused");
+        });
+
+        inputElement.addEventListener('blur', function () {
+            textElement.classList.remove('input-focused');
+        });
+    }
+
+    var nickInput = document.getElementById('frm-registrationForm-nick');
+    var nicktext = document.getElementById('nick-text');
+    var emailInput = document.getElementById('frm-registrationForm-email');
+    var emailtext = document.getElementById('email-text');
+    var passInput = document.getElementById('frm-registrationForm-password');
+    var passtext = document.getElementById('pass-text');
+    var passsecInput = document.getElementById('frm-registrationForm-secondPassword');
+    var passsectext = document.getElementById('pass-sec-text');
+
+    handleInputFocus(nickInput, nicktext);
+    handleInputFocus(emailInput, emailtext);
+    handleInputFocus(passInput, passtext);
+    handleInputFocus(passsecInput, passsectext);
+
+    // document.getElementById('send-reg-button').style.display = 'none'
+
+    passInput.addEventListener('input', function () {
+        const valueCount = passInput.value
+        document.getElementById('pass-count').innerHTML = valueCount.length
+        if (valueCount.length >= 8) {
+            document.getElementById('checkPassCount').style.color = '#30f4eb';
+            if (passsecInput.value.length >= 8) {
+                document.getElementById('send-reg-button').style.display = 'block'
+            }
+        } else {
+            document.getElementById('send-reg-button').style.display = 'none'
+            document.getElementById('checkPassCount').style.color = '#FC1852';
+        }
+    });
+
+    passsecInput.addEventListener('input', function () {
+        const valueCount = passsecInput.value
+        document.getElementById('pass-sec-count').innerHTML = valueCount.length
+        if (valueCount.length >= 8) {
+            if (passInput.value.length >= 8) {
+                document.getElementById('send-reg-button').style.display = 'block'
+            }
+            document.getElementById('checkPassSecCount').style.color = '#30f4eb';
+        } else {
+            document.getElementById('send-reg-button').style.display = 'none'
+            document.getElementById('checkPassSecCount').style.color = '#FC1852';
+        }
+    });
+</script>
+
+
+<div class="container-box">
+<div class="left-box flex-column gap-20">
+<div class="left-box flex-column gap-20" style="width: 0;padding: 0 !important;margin-left: 0 !important;">
+    <div class="flex flex-row align-items-center position-absolute" style="z-index: 8000;">
+        <a class="app-brand-link" href="/">
+            <h1 style="font-size: 60px; font-family: 'bungee', sans-serif;">
+              <span style="color: #ff4c4c;">CATANIA</span><span style="color: #ffffff;">CITY</span>
+            </h1>
+        </a>
+        <a class="main-buttons top-number-item centered-item">
+            <span class="font-size-18 lexend-font color-white width-100-percent weight-bold text-center" id="onlinePlayers"></span>
+        </a>
+        <a class="main-buttons top-box top-discrod-item centered-item">
+            <span class="fi fi-rr-gamepad second-color font-size-22 centered-item" style="    height: 22px;"></span>
+        </a>
+    </div>
+</div>
+    <ul class="menu-inner py-1 flex-column gap-20" style="margin-top: 150px;width: 210px">
+
+                <li class="menu-item   active-menu-item">
+                    <a class="menu-link menu-hover" href="/">
+                        <span class="fi fi-rr-home menu-buttons second-color menu-size-20 menu-item-hover"></span>
+                        <div class="menu-items menu-item-text">Home</div>
+                    </a>
+                </li>
+                <li class="menu-item  ">
+                    <a class="menu-link menu-hover" href="https://discord.gg/JUgWUuVbR6">
+                        <span class="fi fi-rr-shopping-cart menu-buttons second-color menu-size-20 menu-item-hover"></span>
+                        <div class="menu-items menu-item-text">Negozio</div>
+                    </a>
+                </li>
+                <li class="menu-item  ">
+                    <a class="menu-link menu-hover" href="#votaci">
+                        <span class="fi fi-rr-handshake menu-buttons second-color menu-size-20 menu-item-hover"></span>
+                        <div class="menu-items menu-item-text">Votaci</div>
+                    </a>
+                </li>
+               
+               
+                <li class="menu-item  ">
+                    <a class="menu-link menu-hover" href="https://discord.gg/JUgWUuVbR6" target="_blank">
+                        <span class="fi fi-br-time-twenty-four menu-buttons second-color menu-size-20 menu-item-hover"></span>
+                        <div class="menu-items menu-item-text">Assistenza</div>
+                    </a>
+                </li>
+                <li class="menu-item  ">
+                    <a class="menu-link menu-hover" href="/regolamento">
+                        <span class="fi fi-rr-list-check menu-buttons second-color menu-size-20 menu-item-hover"></span>
+                        <div class="menu-items menu-item-text">Regolamento</div>
+                    </a>
+                </li>
+                
+                
+          
+        <hr class="menu-hr">
+    </ul>
+
+</div>
+
+    <div class="center-box body-images" style="background-image: url('./images/topImage.webp'); background-size: contain;">
+
+    <div class="center-box-item" style="display: flex;margin-top: 190px;">
+        <div class="col-lg-4 mb-4 order-0 novinky-no-show">
+        </div>
+        <div class="box-1-1" style="z-index: 8100">
+            <h1 style="font-size: 60px; font-family: 'bungee', sans-serif;">
+              <span style="color: #ff4c4c;">CATANIA</span><span style="color: #ffffff;">CITY</span>
+            </h1>
+
+            <!-- Collegamento Google Fonts per il font simile -->
+            <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+            <span class="lexend-font color-white font-size-40">
+                   <p>Benvenuti sul sito ufficiale<br>CataniaRoleplay.it</p>
+            </span>
+            <div class="box-1-2">
+                <span class="play-button color-white cufel-font bounce_button" type="button" onclick="copyPlayLink('play.cataniaroleplay.it')" data-bs-toggle="modal" data-bs-target="#copiedText">GIOCA</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const gradientButton = document.querySelector('.gradient-buttons');
+        const articleInfo = document.querySelector('.clanek-info');
+
+        const addHoverClass = () => {
+            gradientButton.classList.add('gradient-hover');
+            articleInfo.classList.add('info-hover');
+            document.querySelector('.spawn-color').style.color = '#834ff0';
+        };
+
+        const removeHoverClass = () => {
+            gradientButton.classList.remove('gradient-hover');
+            articleInfo.classList.remove('info-hover');
+            document.querySelector('.spawn-color').style.color = '#33335';
+        };
+
+        gradientButton.addEventListener('mouseover', addHoverClass);
+        gradientButton.addEventListener('mouseout', removeHoverClass);
+
+        articleInfo.addEventListener('mouseover', addHoverClass);
+        articleInfo.addEventListener('mouseout', removeHoverClass);
+    </script>
+
+    <div class="mar-50" id="votaci"></div>
+    
+
+
+    <div style="display: flex;flex-direction: column" class="center-box-item margin-top-160">
+        <h1 class="color-white font-size-40 lexend-font weight-bold" style="margin-bottom: 50px"><center>AIUTACI VOTANDOCI</center></h1>
+        <div class="hlasovani-boxs-items">
+            
+
+            <a class="btn btn-secondary create-new btn-primary font-size-20 hlasovani-button text-color lexend-font weight-bold width-250" onclick="hlasovani('minecraftitalia')" target="_blank" tabindex="0" type="button" style="color: #5F5F99;">
+                MINECRAFT-ITALIA
+            </a>
+            
+        </div>
+
+    </div>
+
+    <script>
+        function hlasovani(typ) {
+
+
+            if (typ === 'minecraftitalia') {
+                window.open('http://minecraft-italia.net/lista/server/cataniacity');
+            }
+            
+        }
+    </script>
+
+    </div>
+
+<script>
+    document.getElementById('votesButton').click()
+
+    function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
+    document.getElementById('searched-item-statistics').addEventListener('input', debounce(function () {
+        findUserStatistics()
+    }, 500));  // 500 ms debounce
+
+
+    function findUserStatistics() {
+
+        let jsonPayload = {
+            'statistiky': selectedStatistics,
+            'nick': document.getElementById('searched-item-statistics').value,
+        };
+
+        fetch(HOST + 'statistics', {
+            method: 'POST',
+            body: JSON.stringify(jsonPayload)
+        })
+            .then((response) => response.json())
+            .then((data) => setStatistics(data));
+    }
+
+    function loadStatistics(statistiky, clickedButton) {
+
+        if (statistiky === 'Votes') {
+            selectedStatistics = 'Votes'
+        }
+        if (statistiky === 'HexCoiny') {
+            selectedStatistics = 'HexCoiny'
+        }
+        if (statistiky === 'Hours') {
+            selectedStatistics = 'Hours'
+        }
+        if (statistiky === 'Money') {
+            selectedStatistics = 'Money'
+        }
+
+        let jsonPayload = {
+            'statistiky': statistiky,
+            'nick': null,
+        };
+
+        // Odebrání třídy active-statistics ze všech tlačítek
+        let buttons = document.querySelectorAll('.statistics-button');
+        buttons.forEach(button => {
+            button.classList.remove('active-statistics');
+        });
+
+        // Přidání třídy active-statistics k kliknutému tlačítku
+        clickedButton.classList.add('active-statistics');
+
+        fetch(HOST + 'statistics', {
+            method: 'POST',
+            body: JSON.stringify(jsonPayload)
+        })
+            .then((response) => response.json())
+            .then((data) => setStatistics(data));
+    }
+
+    function setStatistics(data) {
+        document.getElementById('statistiky').innerHTML = data
+    }
+</script>
+<script src="js/swiper-element-bundle.min.js"></script>
+<script src="js/mobilecheck.js"></script>
+
+<script src="js/swiper-bundle.min.js"></script>
+
+<script>
+    let slidesPerViews = 3;
+    let spaceBetweenItem = 15;
+    if (mobileAndTabletCheck()) {
+        slidesPerViews = 1;
+        spaceBetweenItem = 0;
+    }
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto', // Pokud chcete, aby byl počet snímků na obrazovce dynamický
+        loop: true, // Nastavení loop na true pro nekonečné rolování
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+<script>
+
+    document.getElementById("minecraft-nick").oninput = () => {
+        getAvatar()
+    }
+
+    function getAvatar() {
+
+        let mcNick = document.getElementById('minecraft-nick').value
+        document.getElementById("mc-user-nick-image").src = "https://render.skinmc.net/3d.php?user=" + mcNick + "&vr=-10&hr0&hrh=25&aa=&headOnly=true&ratio=50";
+    }
+</script>
+<script>
+    function copyPlayLink(copyText) {
+        navigator.clipboard.writeText(copyText);
+    }
+</script>
+
+
+
+<div class="right-box" style="        width: 300px !important;">
+
+
+<a class="app-brand-link mobile-logo" style="    top: 60px;position: absolute;z-index: 8100;" href="/">
+    <h1 style="font-size: 60px; font-family: 'bungee', sans-serif;">
+      <span style="color: #ff4c4c;">CATANIA</span><span style="color: #ffffff;">CITY</span>
+    </h1>
+</a>
+
+<a class="app-brand-link mobile-logo-2" style="    top: 60px;position: absolute;z-index: 8100;" href="/">
+    <h1 style="font-size: 40px; font-family: 'bungee', sans-serif;">
+      <span style="color: #ff4c4c;">CATANIA</span><span style="color: #ffffff;">CITY</span>
+    </h1>
+</a>
+
+
+<li class="flex flex-row align-items-center position-absolute right-top-item top-header">
+
+    <ul class="navbar-nav flex-row align-items-center ms-auto" style="float: right">
+            
+
+          
+
+
+
+        <li class="nav-item navbar-dropdown dropdown-user dropdown hamburger-menu" data-bs-toggle="modal" data-bs-target="#hamburgerMenu">
+            <a class="nav-link dropdown-toggle hide-arrow">
+                <i class="fi fi-rr-menu-burger menu-hover  " style="font-size: 40px;
+    margin: 6px 0 0 8px"></i>
+            </a>
+        </li>
+    </ul>
+</li>
+
+        
+
+            <div class="card lexend-font box-shadow-none">
+                <div class="card-body right-box-width">
+                    <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="right-box-item gap-20">
+                            <span class="font-size-20 right-box-color-top">FONDATORI</span>
+                                <a class="menu-link">
+                                    <div class="li-buttons right-buttons  padding-15">
+                                        <img src="https://crafatar.com/renders/head/308e2b18167b4c7fb4f1520bd688f8df?scale=10" class="image-players">
+                                    </div>
+                                    <div class="menu-items font-size-18 first-place" style="font-size: 17px !important;">Ketamjna</div>
+                                </a>
+                                <a class="menu-link">
+                                    <div class="li-buttons right-buttons  padding-15">
+                                        <img src="https://crafatar.com/renders/head/14b5966e27d448539ed1ef8097aa5fda?scale=10" class="image-players">
+                                    </div>
+                                    <div class="menu-items font-size-18 first-place" style="font-size: 17px !important;">anfetamjnaa</div>
+                                </a>
+                                <a class="menu-link">
+                                    <div class="li-buttons right-buttons  padding-15">
+                                        <img src="https://crafatar.com/renders/head/dd2c42977f1f46deb5ebf3c91e09dffa?scale=10" class="image-players">
+                                    </div>
+                                    <div class="menu-items font-size-18 first-place" style="font-size: 17px !important;">vMeslate</div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+</div>       
+
+<script src="js/addToCart.js"></script>
+<script>
+    function goToStore(id) {
+        addToCard(id, 1)
+        window.location.href = HOST + 'obchod';
+    }
+</script></div>
+
+    <style>
+        .footer-icons{
+            display: flex;
+            gap: 8px;
+            margin: 6px 0;
+            align-items: center;
+        }
+
+        .fi-brands-instagram:before {
+            content: "\f16e";
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+        }
+    </style>
+    <div class="col-lg-12 mb-4 order-0 center-box footer-container">
+        <div class="footer-box">
+            <div class="col-lg-3 mb-1 order-0 " style="gap: 0">
+            <span class="hlasovani-button fotter-button font-size-20 lexend-font color-white centered-item" style="margin-bottom: 20px">
+                Inizio
+            </span>
+                        <a class="menu-link silver-crown footer-icons lexend-font font-size-18 " href="/">
+                            Home
+                        </a>
+                        <a class="menu-link silver-crown footer-icons lexend-font font-size-18 " href="https://discord.gg/JUgWUuVbR6">
+                            Negozio
+                        </a>
+                        <a class="menu-link silver-crown footer-icons lexend-font font-size-18 " href="#votaci">
+                            Votaci
+                        </a>
+                        <a class="menu-link silver-crown footer-icons lexend-font font-size-18 " href="https://discord.gg/JUgWUuVbR6">
+                            Assistenza
+                        </a>
+                        <a class="menu-link silver-crown footer-icons lexend-font font-size-18 " href="/regolamento">
+                            Regolamento
+                        </a>
+                        
+            </div>
+            <div class="col-lg-3 mb-1 order-0 " style="gap: 0">
+            <span class="hlasovani-button fotter-button font-size-20 lexend-font color-white centered-item" style="    margin-bottom: 20px">
+                Legali
+            </span>
+                            <a class="menu-link footer-icons silver-crown lexend-font font-size-18 " href="/tos">
+                                Termini di Servizio
+                            </a>
+                            <a class="menu-link footer-icons silver-crown lexend-font font-size-18 " href="/informativa-privacy">
+                                Informativa sulla Privacy
+                            </a>
+                            <a class="menu-link footer-icons silver-crown lexend-font font-size-18 " href="/politica-rimborso">
+                                Politica sui Rimborsi
+                            </a>
+                <span class="hlasovani-button fotter-button font-size-20 lexend-font color-white centered-item" style="margin-top: 20px;margin-bottom: 20px">
+                Contatti
+            </span>
+                <a class="menu-link footer-icons silver-crown lexend-font font-size-18" style="color: #606199;cursor: pointer" >
+                    E-mail: supporto@cataniaroleplay.it
+                </a>
+                
+                
+            </div>
+            <div class="col-lg-3 mb-1 order-0 " style="gap: 0">
+            <span class="hlasovani-button fotter-button font-size-20 lexend-font color-white centered-item" style="    margin-bottom: 20px">
+                Social
+            </span>
+                <div class="footer-icons">
+                    <span class="fi fi-brands-discord silver-color font-size-18" style="width: 18px;height: 18px;"></span>
+                <a href="https://discord.gg/JUgWUuVbR6" class="menu-link silver-crown lexend-font font-size-18 " target="_blank">Discord</a>
+                </div>
+                
+                <div class="footer-icons">
+                    <span class="fab fa-tiktok silver-color font-size-18" style="width: 18px;height: 18px;"></span>
+                <a href="https://www.tiktok.com/@cataniacityroleplay" target="_blank" class="menu-link silver-crown lexend-font font-size-18 ">Tiktok</a>
+                </div>
+                
+                <div class="footer-icons">
+                    <span class="fi fi-brands-youtube silver-color font-size-18" style="width: 18px;height: 18px;"></span>
+                <a href="https://www.youtube.com/@CataniaCityRoleplay" class="menu-link silver-crown lexend-font font-size-18 " target="_blank">YouTube</a>
+                </div>
+                
+               
+                <div class="footer-icons">
+                    <span class="fi fi-brands-telegram silver-color font-size-18" style="width: 18px;height: 18px;"></span>
+                    <a href=" https://t.me/CataniaCityRoleplay" class="menu-link silver-crown lexend-font font-size-18 " target="_blank">Telegram</a>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-2 order-0 footer-store-box">
+            <span class="hlasovani-button fotter-button font-size-20 lexend-font color-white centered-item" style="margin-bottom: 20px">
+                Negozio
+            </span>
+                <span class=" silver-crown lexend-font font-size-18 text-centered">
+                Visita il nostro negozio sul discord, dove puoi acquistare gradi, chiavi, mezzi di trasporto e molti altri articoli interessanti.
+            </span>
+
+                <a class="lexend-font color-white centered-item bounce_button weight-bold shopnow" type="button" href="https://discord.gg/JUgWUuVbR6">
+                    Visita Negozio
+                </a>
+            </div>
+        </div>
+
+        <span class="font-size-18 lexend-font text-color" style="margin: 30px auto;z-index: 1000;">
+    ©2025 <span style="color: #834CF0">CataniaCity </span> /  Tutti i diritti riservati  /  Non è affilitato a Mojang AB  /  Creato da <a style="color: #834CF0" href="https://t.me/Ketamjnaa" role="button" target="_blank">Ketamjna</a></span>
+        
+    </div>
+
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/bootstrap.js"></script>
+<script src="js/onlinePlayers.js"></script>
+
+
+<script src="js/api.js" async="" defer=""></script>
+
+
+
+
+</body></html>
