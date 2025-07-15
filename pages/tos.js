@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
-
 export default function Tos() {
-  useEffect(() => {
-    window.location.href = 'https://cataniaroleplay.it/tos.html'; // sostituisci con il link desiderato
-  }, []);
+  return null; // Non viene mai renderizzato perché scatta il redirect
+}
 
-  return (
-    <div>
-      <h1>Reindirizzamento in corso...</h1>
-      <p>Se non vieni reindirizzato automaticamente, clicca <a href="https://cataniaroleplay.it/tos.html">qui</a>.</p>
-    </div>
-  );
+export async function getServerSideProps() {
+  return {
+    redirect: {
+      destination: 'https://cataniaroleplay.it/tos.html', // 👉 sostituisci con il tuo link esterno
+      permanent: false, // false = redirect temporaneo (302), true = permanente (301)
+    },
+  };
 }
