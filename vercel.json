@@ -1,9 +1,5 @@
 {
-  "routes": [
-    { "src": "/", "dest": "publitc/index.html" },
-    { "src": "/regolamento", "dest": "/public/regolamento.html" },
-    { "src": "/tos", "dest": "/public/tos.html" },
-    { "src": "/informativa-privacy", "dest": "/public/privacy.html" },
-    { "src": "/politica-rimborso", "dest": "/public/rimborsi.html" }
+  "rewrites": [
+    { "source": "/tos", "destination": "/api/tos" }
   ]
 }
