@@ -1,8 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/regolamento", "destination": "/public/regolamento.html" },
-    { "source": "/tos", "destination": "/public/tos.html" },
-    { "source": "/informativa-privacy", "destination": "/public/privacy.html" },
-    { "source": "/politica-rimborso", "destination": "/public/rimborsi.html" }
+  "routes": [
+    { "src": "/", "destination": "publitc/index.html" },
+    { "src": "/regolamento", "destination": "/public/regolamento.html" },
+    { "src": "/tos", "destination": "/public/tos.html" },
+    { "src": "/informativa-privacy", "destination": "/public/privacy.html" },
+    { "src": "/politica-rimborso", "destination": "/public/rimborsi.html" }
   ]
 }
